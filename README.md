@@ -9,3 +9,6 @@ https://towardsdatascience.com/all-you-need-to-know-about-attention-and-transfor
 Article 3 =>
 
 https://towardsdatascience.com/build-your-own-transformer-from-scratch-using-pytorch-84c850470dcb
+
+
+https://miro.medium.com/v2/resize:fit:720/format:webp/1*iBtLFJu7eiGy5vhmOw56-w.png
