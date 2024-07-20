@@ -11,4 +11,5 @@ Article 3 =>
 https://towardsdatascience.com/build-your-own-transformer-from-scratch-using-pytorch-84c850470dcb
 
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/5edb7895-6d05-4e36-b7d7-25199f45f76c)
+
