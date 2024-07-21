@@ -51,3 +51,18 @@ class MultiHeadAttention(nn.Module):
             attention_output=self.scaled_dot_product_attention(Q,K,V,mask)
             output=self.W_o(self.combine_heads(attention_output))
             return output
+class PostionalWiseFeedForward(nn.Module):
+    def __init__(self,d_model,d_ff):
+        super(PostionalWiseFeedForward,self).__init__()
+        self.fc1=nn.Linear(d_model,d_ff)
+        self.fc2=nn.Linear(d_ff,d_model)
+
+        self.relu=nn.Relu()
+
+    def forward(self,x):
+        return self.fc2(self.relu(self.fc1(x)))
+
+#The PositionWiseFeedForward class extends PyTorch’s nn.Module and implements a position-wise feed-forward network.
+#The class initializes with two linear transformation layers and a ReLU activation function.
+#The forward method applies these transformations and activation function sequentially to compute the output.
+#This process enables the model to consider the position of input elements while making predictions.
