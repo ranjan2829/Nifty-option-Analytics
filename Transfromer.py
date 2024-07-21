@@ -100,3 +100,8 @@ class Encoder(nn.Module):
 
         x=self.norm2(x+self.dropout(ff_out))
         return x
+
+class Decoder(nn.Module):
+    def __init__(self):
+        super(Decoder,self).__init__()
+        self.self_attn=MultiHeadAttention
