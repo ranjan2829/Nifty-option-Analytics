@@ -1,6 +1,7 @@
 from _typeshed import BytesPath
 import torch
 import torch.nn as nn
+from torch.nn.modules import dropout
 import torch.optim as optim
 import torch.utils.data as data
 import math
@@ -104,4 +105,23 @@ class Encoder(nn.Module):
 class Decoder(nn.Module):
     def __init__(self):
         super(Decoder,self).__init__()
-        self.self_attn=MultiHeadAttention
+        self.self_attn=MultiHeadAttention(d_model,num_heads)
+        self.cross_Attn=MultiHeadAttention(d_model,num_heads)
+        self.feed_forward=PostionalWiseFeedForward(d_model,d_ff)
+        self.norm1=nn.LayerNorm(d_model)
+        self.norm2=nn.LayerNorm(d_model)
+        self.norm3=nn.LayerNorm(d_model)
+
+        self.dropout=nn.Dropout(dropout)
+    def forward(self,x,enc_output,srx_mask,tgt_mask):
+        attn=self.self_attn(x,x,x,tgt_mask)
+        x=self.norm1(x+self.dropout(attn))
+        attn=self.cross_Attn(x,enc_output,enc_output,srx_mask)
+
+        x=self.norm2(x+self.dropout(attn))
+
+        ff=self.feed_forward(x)
+
+        x=self.norm3(x+self.dropout(ff))
+
+        return x
