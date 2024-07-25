@@ -125,3 +125,9 @@ class Decoder(nn.Module):
         x=self.norm3(x+self.dropout(ff))
 
         return x
+        #The forward method computes the decoder layer output by performing the following steps:
+
+        #Calculate the masked self-attention output and add it to the input tensor, followed by dropout and layer normalization.
+        #Compute the cross-attention output between the decoder and encoder outputs, and add it to the normalized masked self-attention output, followed by dropout and layer normalization.
+        #Calculate the position-wise feed-forward output and combine it with the normalized cross-attention output, followed by dropout and layer normalization.
+        #Return the processed tensor.
