@@ -14,3 +14,4 @@ https://towardsdatascience.com/build-your-own-transformer-from-scratch-using-pyt
 ![image](https://github.com/user-attachments/assets/5edb7895-6d05-4e36-b7d7-25199f45f76c)
 
 ![image](https://miro.medium.com/v2/resize:fit:640/format:webp/1*9XuOogviDS6hkWGL2qIKQA.png)
+![image](https://github.com/user-attachments/assets/93acc4d8-ff32-4c2a-8ed2-e2ac432ea9cb)
