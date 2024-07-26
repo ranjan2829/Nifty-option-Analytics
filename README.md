@@ -1,7 +1,3 @@
-Sure! Here's an enhanced version of the README file, including animations and deep neural network visualizations:
-
----
-
 # Building a Transformer from Scratch Using PyTorch
 
 ![Transformer](https://miro.medium.com/v2/resize:fit:640/format:webp/1*9XuOogviDS6hkWGL2qIKQA.png)
